@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-abgeordnetenwatch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Abgeordnetenwatch MCP — German federal & state parliament data.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-65a205d944e4f0bbd683a579fc6d8862b9c9f08e806a2b33af67b144dcd1e371",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-355ad18dd6f9adcbc94ef26e39a98f548470b85095c10cc83d8b6686f9e7b4fd",
+    "sourceCommit": "dca20ba6e13a9aa1c9f2918fc2ddaffe4cc30e5c"
   }
 }
