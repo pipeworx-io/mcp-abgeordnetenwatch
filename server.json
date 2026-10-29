@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/abgeordnetenwatch",
   "title": "Abgeordnetenwatch",
   "description": "Abgeordnetenwatch MCP — German federal & state parliament data.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/abgeordnetenwatch",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-abgeordnetenwatch",

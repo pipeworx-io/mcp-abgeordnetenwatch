@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-abgeordnetenwatch",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Abgeordnetenwatch MCP — German federal & state parliament data.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-abgeordnetenwatch": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "abgeordnetenwatch"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-abgeordnetenwatch.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/abgeordnetenwatch",
   "pipeworx": {
-    "sourceHash": "v1-c6b1dc949c20ac3e7112173d8ee1dd4b1fe496ccffef50ec9d226a0c6bbc2c52",
-    "sourceCommit": "71f5325b13bb0ea0de2f0f7207885962ec91a484"
+    "mode": "gateway",
+    "slug": "abgeordnetenwatch",
+    "gatewaySlug": "abgeordnetenwatch",
+    "sourceHash": "v1-a2b7518130a3030b583aa7b241ab9488cfb83509765fd8eac8f060a7a1aaf6e8",
+    "sourceCommit": "c6136b81713e72ccb22977ca0c0cd981f8c3f081"
   }
 }

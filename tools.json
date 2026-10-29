@@ -1,0 +1,69 @@
+[
+  {
+    "name": "list_parliaments",
+    "description": "List German parliaments tracked by Abgeordnetenwatch: the federal Bundestag, all 16 state Landtage, and the EU parliament. Returns id, short name and full official name for each. Use the ids to scope politician or poll queries.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "search_politicians",
+    "description": "Search German federal and state politicians by name (surname or partial surname, contains-match). Returns matching politicians with party, year of birth and sex. Example: name \"Scholz\" or \"Merz\". Use get_politician with a returned id for the full profile.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Surname or partial surname to search for (contains match), e.g. \"Scholz\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results to return (default 10)."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "get_politician",
+    "description": "Get the full profile of a single German politician by Abgeordnetenwatch id: name, party, year of birth, sex, education and residence. Get the id from search_politicians.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Abgeordnetenwatch politician id."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "list_polls",
+    "description": "List recorded parliamentary votes/polls (Abstimmungen) with their title and date. Optionally scope to a single legislative period via period_id (a parliament-period id). Returns most recent polls first.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "period_id": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Optional parliament-period (legislature) id to filter polls."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results to return (default 10)."
+        }
+      }
+    }
+  }
+]
